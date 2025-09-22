@@ -64,31 +64,39 @@ The Central Library wants to manage book lending and cultural events.
 - Overdue fines apply for late returns.
 
 ### ER Diagram:
-*Paste or attach your diagram here*  
-![ER Diagram](er_diagram_library.png)
+<img width="858" height="873" alt="image" src="https://github.com/user-attachments/assets/91342699-8f0c-43aa-9b2c-025c1cb00ea3" />
+
 
 ### Entities and Attributes
+| Entity     | Attributes (PK, FK)                                                             | Notes              |
+| ---------- | ------------------------------------------------------------------------------- | ------------------ |
+| USER       | USER\_ID (PK), USER\_NAME, USER\_EMAIL, USER\_ADD, USER\_MOBILE, LOGIN\_ID (FK) | User information   |
+| LOGIN      | LOGIN\_ID (PK), LOGIN\_PASS, LOGIN\_ROLLPASS                                    | Login details      |
+| ROLES      | ROLL\_ID (PK), ROLL\_NAME, ROLL\_DESC                                           | Role details       |
+| BOOKING    | BOOK\_ID (PK), BOOK\_TYPE, BOOK\_DESC, ITEM\_ID (FK)                            | Booking details    |
+| ITEMS      | ITEM\_ID (PK), ITEM\_TYPE, ITEM\_DESC, RES\_ID (FK)                             | Items offered      |
+| RESTAURANT | RES\_ID (PK), RES\_NAME, RES\_TYPE                                              | Restaurant details |
 
-| Entity | Attributes (PK, FK) | Notes |
-|--------|--------------------|-------|
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
 
 ### Relationships and Constraints
+| Relationship               | Cardinality | Participation  | Notes                                                                       |
+| -------------------------- | ----------- | -------------- | --------------------------------------------------------------------------- |
+| USER – LOGIN               | 1:1         | Total on USER  | Each user must have one login                                               |
+| USER – ROLES (HAS)         | M\:N        | Partial        | A user can have many roles, a role can be assigned to many users            |
+| USER – RESTAURANT (MANAGE) | 1\:M        | Partial        | A user can manage multiple restaurants, each restaurant managed by one user |
+| BOOKING – ITEMS (HAS)      | M\:N        | Partial        | A booking can contain many items, an item can be part of many bookings      |
+| ITEMS – RESTAURANT         | M:1         | Total on ITEMS | Each item belongs to one restaurant, a restaurant can have many items       |
 
-| Relationship | Cardinality | Participation | Notes |
-|--------------|------------|---------------|-------|
-|              |            |               |       |
-|              |            |               |       |
-|              |            |               |       |
 
 ### Assumptions
-- 
-- 
-- 
+- Each User must have exactly one Login – no user exists without login credentials.
+
+- A Restaurant is managed by a single User, but a User can manage multiple Restaurants.
+
+- Each Item belongs to exactly one Restaurant, but a Restaurant can have many Items.
+
+- A Booking can include multiple Items, and an Item can appear in multiple Bookings (many-to-many relationship).
+ 
 
 ---
 
