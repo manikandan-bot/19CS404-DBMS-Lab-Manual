@@ -46,124 +46,205 @@ Used to retrieve records from a table.
 SELECT column1, column2 FROM table_name WHERE condition;
 ```
 **Question 1**
---
--- Paste Question 1 here
+---
+<img width="965" height="310" alt="image" src="https://github.com/user-attachments/assets/f17a8c23-1bc4-4b5b-b906-c8a11b5c4b26" />
 
 ```sql
--- Paste your SQL code below for Question 1
+SELECT 
+    InsuranceCompany,
+    AVG(EndDate - StartDate) AS AvgCoverageDurationDays
+FROM 
+    Insurance
+GROUP BY 
+    InsuranceCompany;
+
 ```
 
 **Output:**
 
-![Output1](output.png)
+<img width="1046" height="769" alt="image" src="https://github.com/user-attachments/assets/de9fdc73-3c7b-446d-a948-122a959aa8a5" />
+
+
 
 **Question 2**
----
--- Paste Question 2 here
+
+<img width="696" height="632" alt="image" src="https://github.com/user-attachments/assets/abe15fbd-2274-404c-9a45-2893c616b2d2" />
+
+
+
 
 ```sql
--- Paste your SQL code below for Question 2
+SELECT 
+    strftime('%H', AppointmentDateTime) AS HourOfDay,
+    COUNT(*) AS TotalAppointments
+FROM Appointments
+GROUP BY HourOfDay
+ORDER BY HourOfDay;
 ```
+
 
 **Output:**
 
-![Output2](output.png)
+<img width="817" height="627" alt="image" src="https://github.com/user-attachments/assets/62712659-32dd-4173-bbdb-def311363843" />
+
 
 **Question 3**
----
--- Paste Question 3 here
+<img width="951" height="471" alt="image" src="https://github.com/user-attachments/assets/9f3d6df9-3a09-4e8d-8f96-16e77afc1e3b" />
+
+
 
 ```sql
--- Paste your SQL code below for Question 3
+SELECT 
+    AVG(income) AS avg_income
+FROM employee
+WHERE name LIKE 'A%';
 ```
+
 
 **Output:**
 
-![Output3](output.png)
+<img width="645" height="392" alt="image" src="https://github.com/user-attachments/assets/46299237-0273-4611-be87-a07a51f28b0e" />
+
+
 
 **Question 4**
----
--- Paste Question 4 here
+
+<img width="886" height="480" alt="image" src="https://github.com/user-attachments/assets/90e95931-77a0-4ec0-b042-6d381d219ad8" />
+
 
 ```sql
--- Paste your SQL code below for Question 4
+SELECT 
+    name,
+    email,
+    LENGTH(email) AS min_email_length
+FROM customer
+ORDER BY LENGTH(email)
+LIMIT 1;
+
 ```
 
 **Output:**
 
-![Output4](output.png)
+
+<img width="1192" height="409" alt="image" src="https://github.com/user-attachments/assets/070a72a8-4e7a-4278-9e55-3793a13b4f8f" />
+
 
 **Question 5**
----
--- Paste Question 5 here
+<img width="1131" height="507" alt="image" src="https://github.com/user-attachments/assets/4ae63a17-b2db-4c2c-9adc-f1405fcf91ea" />
+
 
 ```sql
--- Paste your SQL code below for Question 5
+SELECT 
+    COUNT(*) AS COUNT
+FROM customer
+WHERE city <> 'Noida';
+
 ```
 
 **Output:**
 
-![Output5](output.png)
+<img width="559" height="407" alt="image" src="https://github.com/user-attachments/assets/8aed1f69-c136-403d-94ef-e85b477f5675" />
+
 
 **Question 6**
----
--- Paste Question 6 here
+
+<img width="1093" height="502" alt="image" src="https://github.com/user-attachments/assets/9602959a-60f0-469a-b0ed-56654fe954ba" />
+
 
 ```sql
--- Paste your SQL code below for Question 6
+SELECT SUM(workhour) AS "Total working hours"
+FROM employee1;
+
 ```
 
 **Output:**
 
-![Output6](output.png)
+
+<img width="632" height="390" alt="image" src="https://github.com/user-attachments/assets/3abf07ac-293b-4c6a-94f9-3f3d26dd7980" />
+
 
 **Question 7**
----
--- Paste Question 7 here
+
+<img width="1211" height="511" alt="image" src="https://github.com/user-attachments/assets/eb5b1ed9-4efb-408e-ba29-4fdcc22498c2" />
+
 
 ```sql
--- Paste your SQL code below for Question 7
+SELECT 
+    age,
+    MIN(income) AS "MIN(income)"
+FROM employee
+GROUP BY age
+HAVING MIN(income) < 400000;
+
 ```
 
 **Output:**
 
-![Output7](output.png)
+<img width="754" height="478" alt="image" src="https://github.com/user-attachments/assets/2a79dee6-cd17-4f15-8fc6-b20b1b4e2cae" />
+
 
 **Question 8**
----
--- Paste Question 8 here
+
+<img width="1203" height="516" alt="image" src="https://github.com/user-attachments/assets/84dd5f1b-5c17-4f19-a40e-e631f72efdbc" />
+
 
 ```sql
--- Paste your SQL code below for Question 8
+SELECT 
+    category_id,
+    COUNT(product_name) AS "count(product_name)"
+FROM products
+GROUP BY category_id
+HAVING category_id < 3;
+
 ```
 
 **Output:**
 
-![Output8](output.png)
+<img width="847" height="444" alt="image" src="https://github.com/user-attachments/assets/b3fb7e5e-7d6d-4e73-9259-4aaed4ff4a3e" />
+
 
 **Question 9**
----
--- Paste Question 9 here
+
+<img width="1215" height="597" alt="image" src="https://github.com/user-attachments/assets/edcd5c1d-7779-4fb8-bdf5-24854e4fb817" />
+
 
 ```sql
--- Paste your SQL code below for Question 9
+SELECT 
+    (age / 5) * 5 AS age_group,
+    MAX(salary) AS "MAX(salary)"
+FROM customer1
+GROUP BY (age / 5) * 5
+HAVING MAX(salary) > 8000;
+
 ```
 
 **Output:**
 
-![Output9](output.png)
+
+<img width="683" height="452" alt="image" src="https://github.com/user-attachments/assets/f90a985f-a11e-4865-8dae-cd26c1f59682" />
+
 
 **Question 10**
----
--- Paste Question 10 here
+
+
+<img width="1025" height="550" alt="image" src="https://github.com/user-attachments/assets/7181f305-26be-43b2-9808-c7c0fbd0f809" />
+
 
 ```sql
--- Paste your SQL code below for Question 10
+select Frequency,count(*) as TotalPrescriptions
+from Prescriptions
+group by Frequency
 ```
 
 **Output:**
 
-![Output10](output.png)
+<img width="911" height="604" alt="image" src="https://github.com/user-attachments/assets/34bba6a9-92e6-407d-892c-11b1b1b62732" />
+
+
+
+<img width="1460" height="475" alt="image" src="https://github.com/user-attachments/assets/2fcdc369-68a9-45b2-a6f6-b6a74578fdc4" />
+
+
 
 ## RESULT
 Thus, the SQL queries to implement DML commands have been executed successfully.
