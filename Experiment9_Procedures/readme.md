@@ -62,6 +62,13 @@ Key Differences:
 
 **Expected Output:**  
 Square of 6 is 36
+## program
+
+<img width="644" height="404" alt="image" src="https://github.com/user-attachments/assets/d61c5e5f-cb6d-4d1c-b8f4-73abee3ef890" />
+
+
+## output
+<img width="339" height="158" alt="image" src="https://github.com/user-attachments/assets/45169ce7-42cf-4bc7-8460-14e8a484fc37" />
 
 ---
 
@@ -77,6 +84,14 @@ Square of 6 is 36
 **Expected Output:**  
 Factorial of 5 is 120
 
+## program
+
+<img width="906" height="565" alt="image" src="https://github.com/user-attachments/assets/e8ace861-0ea2-4c24-8056-0ace227b86f4" />
+
+## output
+
+<img width="309" height="163" alt="image" src="https://github.com/user-attachments/assets/2275a26c-2ec5-4534-bca0-5903c4883d4b" />
+
 ---
 
 ## 3. Write a PL/SQL Procedure to Check Whether a Number is Even or Odd
@@ -89,6 +104,12 @@ Factorial of 5 is 120
 
 **Expected Output:**  
 12 is Even
+
+## program
+<img width="895" height="456" alt="image" src="https://github.com/user-attachments/assets/df19b69d-ed55-4068-a1d4-dea138b6f81a" />
+
+## output
+<img width="292" height="132" alt="image" src="https://github.com/user-attachments/assets/657fdc0c-9e91-43b8-b67f-40f2137db06b" />
 
 ---
 
@@ -103,6 +124,14 @@ Factorial of 5 is 120
 
 **Expected Output:**  
 Reversed number of 1234 is 4321
+
+## program
+
+<img width="849" height="588" alt="image" src="https://github.com/user-attachments/assets/d2cbbe3a-96a1-4fc8-a804-c7a08bfc777f" />
+
+## output
+
+<img width="336" height="123" alt="image" src="https://github.com/user-attachments/assets/13a36817-0f33-40b9-a0fd-d2009b3cf4af" />
 
 ---
 
@@ -121,6 +150,15 @@ Multiplication table of 5:
 5 x 3 = 15  
 ...  
 5 x 10 = 50
+
+## program
+
+<img width="859" height="378" alt="image" src="https://github.com/user-attachments/assets/0fad9bcf-889d-48e4-a4e4-e3c6cd05bc5e" />
+
+
+## output
+
+<img width="301" height="408" alt="image" src="https://github.com/user-attachments/assets/44f94094-921d-4974-a7d6-44241ed436cb" />
 
 ## RESULT
 Thus, the PL/SQL programs using procedures and functions were written, compiled, and executed successfully.
